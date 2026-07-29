@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, ArrowRight, Sparkles } from 'lucide-react';
+import logoDark from '../assets/images/IMG-20250917-WA0013-1024x601.png';
+import logoLight from '../assets/images/WSG-LOGO.png';
 
 interface NavbarProps {
   currentPage: 'home' | 'about' | 'services' | 'projects' | 'team' | 'management' | 'contact' | 'privacy';
@@ -88,7 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate, onOpenP
           {/* Header Image Logo */}
           <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="z-10 focus:outline-none flex items-center group">
             <img
-              src={isScrolled ? "../assets/WSG-LOGO.png" : "../assets/IMG-20250917-WA0013-1024x601.png"}
+              src={isScrolled ? logoLight : logoDark}
               alt="World Sports Group Logo"
               referrerPolicy="no-referrer"
               className="h-10 md:h-12 w-auto object-contain transition-all duration-300 group-hover:scale-105"
