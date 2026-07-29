@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Play, Volume2, ShieldCheck, Award } from 'lucide-react';
+import wsgHeroSports from '../assets/images/wsg_hero_sports_1785224235464.jpg';
 
 interface ShowreelModalProps {
   isOpen: boolean;
@@ -48,7 +49,7 @@ export const ShowreelModal: React.FC<ShowreelModalProps> = ({ isOpen, onClose })
             {/* Video Container / High End Interactive Preview */}
             <div className="relative aspect-video bg-black flex items-center justify-center overflow-hidden">
               <img
-                src="/src/assets/images/wsg_hero_sports_1785224235464.jpg"
+                src={wsgHeroSports}
                 alt="WSG Showreel Preview"
                 className="w-full h-full object-cover brightness-75 scale-105 animate-pulse duration-[4000ms]"
                 referrerPolicy="no-referrer"

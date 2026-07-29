@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ArrowRight, Trophy, Sparkles, MapPin, Radio, Users, X, ExternalLink } from 'lucide-react';
 import { ProjectItem } from '../types';
+import wsgAsianLeague from '../assets/images/wsg_asian_league_1785224345066.jpg';
+import wsgDevLeague from '../assets/images/wsg_dev_league_1785224364717.jpg';
+import wsgSportsChallenge from '../assets/images/wsg_sports_challenge_1785224385493.jpg';
 
 export const projectsData: ProjectItem[] = [
   {
@@ -10,7 +13,7 @@ export const projectsData: ProjectItem[] = [
     subtitle: 'Asian Legends League T20',
     description: 'The premier T20 cricket league designed for fans worldwide, featuring top players and international broadcast.',
     category: 'LEAGUE',
-    image: '/src/assets/images/wsg_asian_league_1785224345066.jpg',
+    image: wsgAsianLeague,
     location: 'Dubai & Sharjah Stadiums',
     stats: [
       { label: 'Broadcasting', value: '120+ Countries' },
@@ -24,7 +27,7 @@ export const projectsData: ProjectItem[] = [
     subtitle: 'Elite Youth & Talent Academy',
     description: 'An upcoming league focused on identifying and nurturing the next generation of professional athletes.',
     category: 'DEVELOPMENT',
-    image: '/src/assets/images/wsg_dev_league_1785224364717.jpg',
+    image: wsgDevLeague,
     location: 'Middle East & South Asia Hubs',
     stats: [
       { label: 'Talent Scouted', value: '500+ Emerging Stars' },
@@ -38,7 +41,7 @@ export const projectsData: ProjectItem[] = [
     subtitle: 'Multi-Sport Championship Series',
     description: 'Future multi-sport events designed to engage audiences and create high-quality competition across cricket, football, and basketball.',
     category: 'SPORTS EVENT',
-    image: '/src/assets/images/wsg_sports_challenge_1785224385493.jpg',
+    image: wsgSportsChallenge,
     location: 'Dubai • London • Singapore',
     stats: [
       { label: 'Disciplines', value: 'Cricket, Football, Hoops' },

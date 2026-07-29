@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, Building2, Compass, ShieldCheck } from 'lucide-react';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
 
 interface WelcomeSectionProps {
   onLearnMoreClick?: () => void;
@@ -104,7 +105,7 @@ export const WelcomeSection: React.FC<WelcomeSectionProps> = ({ onLearnMoreClick
             {/* Image Container */}
             <div className="relative z-10 rounded-[28px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] border border-[#ECECEC] bg-white group">
               <img loading="lazy"
-                src="/src/assets/images/wsg_dubai_arena_1785224318037.jpg"
+                src={wsgDubaiArena}
                 alt="WSG Dubai Sports Arena Infrastructure"
                 className="w-full h-[440px] sm:h-[500px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                 referrerPolicy="no-referrer"

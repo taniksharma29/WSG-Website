@@ -261,7 +261,7 @@ export const ManagementPage: React.FC<ManagementPageProps> = ({ onOpenPartnerMod
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img loading="lazy"
-            src="/src/assets/images/wsg_dubai_arena_1785224318037.jpg"
+            src={wsgDubaiArena}
             alt="World Sports Group Management Background"
             className="w-full h-full object-cover object-center filter brightness-[0.55] contrast-[1.15]"
             referrerPolicy="no-referrer"

@@ -18,6 +18,8 @@ import {
   Star,
   ChevronDown
 } from 'lucide-react';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
+import wsgAsianLeague from '../assets/images/wsg_asian_league_1785224345066.jpg';
 
 interface TeamPageProps {
   onOpenPartnerModal: () => void;
@@ -75,7 +77,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenPartnerModal }) => {
       bio: 'Responsible for seamless execution of all leagues and tournaments.',
       expertise: 'Stadium Logistics, Multi-Camera Broadcast & Security',
       funFact: 'Managed venue operations for over 100+ international stadium fixtures.',
-      image: '/src/assets/images/wsg_dubai_arena_1785224318037.jpg',
+      image: wsgDubaiArena,
       linkedin: 'https://linkedin.com',
     },
     {
@@ -85,7 +87,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({ onOpenPartnerModal }) => {
       bio: 'Leads brand partnerships, media, and fan engagement initiatives.',
       expertise: 'Global Rights Commercialization, Digital Fan Experience',
       funFact: 'Closed multi-million dollar broadcast sponsorship deals across 120 territories.',
-      image: '/src/assets/images/wsg_asian_league_1785224345066.jpg',
+      image: wsgAsianLeague,
       linkedin: 'https://linkedin.com',
     },
     {

@@ -17,6 +17,8 @@ import {
   Radio,
   ChevronDown
 } from 'lucide-react';
+import wsgHeroSports from '../assets/images/wsg_hero_sports_1785224235464.jpg';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
 
 interface ProjectsPageProps {
   onOpenPartnerModal: () => void;
@@ -36,7 +38,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenPartnerModal }
       description:
         'The flagship T20 tournament bringing together international cricket icons, high-stakes matches, and state-of-the-art multi-camera broadcast production across 120+ territories.',
       metrics: ['150M+ Global Viewers', '8 Franchises', 'Dubai & Global Arenas'],
-      image: '/src/assets/images/wsg_hero_sports_1785224235464.jpg',
+      image: wsgHeroSports,
       status: 'active',
     },
     {
@@ -49,7 +51,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenPartnerModal }
       description:
         'An upcoming premier grass-roots development engine designed to identify, mentor, and launch emerging talent into professional franchise leagues.',
       metrics: ['500+ Grassroots Prospects', '12 Regional Academies', 'Scout Showcase'],
-      image: '/src/assets/images/wsg_athlete_training_1785224370211.jpg',
+      image: wsgHeroSports,
       status: 'upcoming',
     },
     {
@@ -62,7 +64,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenPartnerModal }
       description:
         'A high-octane multi-sport spectacle uniting top club sides and fanbase activations in major metropolitan sports arenas across the Middle East and Asia.',
       metrics: ['3 Major Sports', '10 Host Cities', 'Interactive Fan Zones'],
-      image: '/src/assets/images/wsg_dubai_arena_1785224318037.jpg',
+      image: wsgDubaiArena,
       status: 'upcoming',
     },
   ];
@@ -105,7 +107,7 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onOpenPartnerModal }
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img loading="lazy"
-            src="/src/assets/images/wsg_hero_sports_1785224235464.jpg"
+            src={wsgHeroSports}
             alt="World Sports Group Cricket Stadium Action"
             className="w-full h-full object-cover object-center filter brightness-[0.6] contrast-[1.1]"
             referrerPolicy="no-referrer"

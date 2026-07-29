@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Play, ArrowRight, ChevronLeft, ChevronRight, Pause } from 'lucide-react';
+import wsgHeroSports from '../assets/images/wsg_hero_sports_1785224235464.jpg';
+import wsgAsianLeague from '../assets/images/wsg_asian_league_1785224345066.jpg';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
 
 interface HeroProps {
   onOpenShowreel: () => void;
@@ -25,7 +28,7 @@ const slides: SlideData[] = [
     subheading: 'From Dubai to the world — we create leagues, events, and experiences that excite.',
     ctaText: 'Discover Our Projects',
     ctaAction: 'projects',
-    image: '/src/assets/images/wsg_hero_sports_1785224235464.jpg',
+    image: wsgHeroSports,
     tag: 'GLOBAL LEAGUES & CHAMPIONSHIPS',
   },
   {
@@ -34,7 +37,7 @@ const slides: SlideData[] = [
     subheading: 'Designing and managing sports properties that grow, engage, and inspire.',
     ctaText: 'Explore Our Services',
     ctaAction: 'services',
-    image: '/src/assets/images/wsg_asian_league_1785224345066.jpg',
+    image: wsgAsianLeague,
     tag: 'END-TO-END EVENT PRODUCTION',
   },
   {
@@ -43,7 +46,7 @@ const slides: SlideData[] = [
     subheading: 'Full-scale management for events, leagues, and talent programs worldwide.',
     ctaText: 'Partner With Us',
     ctaAction: 'partner',
-    image: '/src/assets/images/wsg_dubai_arena_1785224318037.jpg',
+    image: wsgDubaiArena,
     tag: 'GLOBAL TALENT & BRAND PATHWAYS',
   },
 ];

@@ -19,6 +19,9 @@ import {
   TrendingUp,
   HeartHandshake
 } from 'lucide-react';
+import wsgHeroSports from '../assets/images/wsg_hero_sports_1785224235464.jpg';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
+import wsgAsianLeague from '../assets/images/wsg_asian_league_1785224345066.jpg';
 
 interface ServicesPageProps {
   onOpenPartnerModal: () => void;
@@ -53,7 +56,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         'Developing formats that attract fans, sponsors, and media',
         'Commercial strategy & scalable execution',
       ],
-      image: '/src/assets/images/wsg_hero_sports_1785224235464.jpg',
+      image: wsgHeroSports,
     },
     {
       id: 2,
@@ -66,7 +69,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         'Broadcast coordination and fan engagement experiences',
         'Sponsorship integration and venue management',
       ],
-      image: '/src/assets/images/wsg_dubai_arena_1785224318037.jpg',
+      image: wsgDubaiArena,
     },
     {
       id: 3,
@@ -79,7 +82,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         'Media, branding, and PR support',
         'Career guidance and professional development',
       ],
-      image: '/src/assets/images/wsg_athlete_training_1785224370211.jpg',
+      image: wsgHeroSports,
     },
     {
       id: 4,
@@ -92,7 +95,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         'Risk management and dispute resolution',
         'Protecting stakeholders and properties',
       ],
-      image: '/src/assets/images/wsg_boardroom_1785224391696.jpg',
+      image: wsgAsianLeague,
     },
     {
       id: 5,
@@ -105,7 +108,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         'Brand activations, marketing, and fan engagement',
         'Long-term growth strategies for stakeholders',
       ],
-      image: '/src/assets/images/wsg_asian_league_1785224345066.jpg',
+      image: wsgAsianLeague,
     },
   ];
 
@@ -117,7 +120,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       badge: 'FLAGSHIP LEAGUE',
       description: 'Full operational management from planning to global broadcast, delivering high-octane cricket entertainment.',
       stats: '150M+ Viewers | 8 Teams | Global Rights',
-      image: '/src/assets/images/wsg_hero_sports_1785224235464.jpg',
+      image: wsgHeroSports,
     },
     {
       id: 2,
@@ -125,7 +128,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       badge: 'TALENT PIPELINE',
       description: 'Nurturing next-generation athletes through professional support, elite coaching, and structured scouting programs.',
       stats: '500+ Athletes | 12 Academies | Elite Pathway',
-      image: '/src/assets/images/wsg_athlete_training_1785224370211.jpg',
+      image: wsgHeroSports,
     },
     {
       id: 3,
@@ -133,7 +136,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
       badge: 'GLOBAL COMPETITIONS',
       description: 'Engaging competitions with immersive fan experiences across cricket, football, basketball, and combat sports.',
       stats: '20+ Host Cities | 100k+ Attendance',
-      image: '/src/assets/images/wsg_dubai_arena_1785224318037.jpg',
+      image: wsgDubaiArena,
     },
   ];
 
@@ -181,7 +184,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img loading="lazy"
-            src="/src/assets/images/wsg_dubai_arena_1785224318037.jpg"
+            src={wsgDubaiArena}
             alt="World Sports Group Stadium Event Production"
             className="w-full h-full object-cover object-center filter brightness-[0.6] contrast-[1.1]"
             referrerPolicy="no-referrer"

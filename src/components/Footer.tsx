@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Twitter, Instagram, Send, Check, MapPin, Phone, Mail, Globe } from 'lucide-react';
+import footerLogo from '../assets/images/IMG-20250917-WA0013-1024x601.png';
 
 interface FooterProps {
   onOpenPartnerModal: () => void;
@@ -48,7 +49,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPartnerModal, onNavigate }
           {/* Column 1: Logo, Brand Statement & Footprints */}
           <div className="lg:col-span-5 space-y-5">
             <img
-              src="/src/assets/images/IMG-20250917-WA0013-1024x601.png"
+              src={footerLogo}
               alt="World Sports Group Logo"
               referrerPolicy="no-referrer"
               className="h-12 sm:h-14 w-auto object-contain"

@@ -18,6 +18,8 @@ import {
   Sparkles,
   Building2
 } from 'lucide-react';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
+import wsgSportsChallenge from '../assets/images/wsg_sports_challenge_1785224385493.jpg';
 
 interface AboutPageProps {
   onOpenPartnerModal: () => void;
@@ -114,7 +116,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
         {/* Hero Background Image */}
         <div className="absolute inset-0 z-0">
           <img loading="lazy"
-            src="/src/assets/images/wsg_dubai_arena_1785224318037.jpg"
+            src={wsgDubaiArena}
             alt="World Sports Group Stadium Background"
             className="w-full h-full object-cover object-center filter brightness-[0.6] contrast-[1.1]"
             referrerPolicy="no-referrer"
@@ -436,7 +438,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
             <div className="lg:col-span-5">
               <div className="rounded-[32px] overflow-hidden border border-[#ECECEC] shadow-2xl relative group bg-[#0B0B0D]">
                 <img loading="lazy"
-                  src="/src/assets/images/wsg_sports_challenge_1785224385493.jpg"
+                  src={wsgSportsChallenge}
                   alt="WSG Sports Equipment Challenge"
                   className="w-full h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 brightness-90"
                   referrerPolicy="no-referrer"
