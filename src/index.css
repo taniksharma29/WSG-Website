@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-gold: #D89B18;
+    --color-gold-hover: #F2B632;
+    --color-dark-bg: #0B0B0D;
+    --color-dark-secondary: #141414;
+    --color-text-dark: #1A1A1A;
+    --color-muted: #6B6B6B;
+    --color-border: #ECECEC;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-dark);
+    background-color: #ffffff;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0B0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A2A2E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D89B18;
+}
+
+/* Gold Gradient Utilities */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #D89B18 0%, #F2B632 50%, #B87E0E 100%);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F2B632 0%, #D89B18 60%, #E2A829 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gold-glow {
+  box-shadow: 0 0 25px rgba(216, 155, 24, 0.25);
+}
+
+/* Modern Luxury Glass Effect */
+.glass-nav-light {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-nav-dark {
+  background: rgba(11, 11, 13, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card-light {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(236, 236, 236, 0.8);
+}
+
+.glass-card-dark {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Subtle Shimmer Animation */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, rgba(216, 155, 24, 0) 0%, rgba(216, 155, 24, 0.2) 50%, rgba(216, 155, 24, 0) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 3s infinite;
+}
+
+/* Custom button hover scale & glow */
+.btn-gold-primary {
+  background: linear-gradient(135deg, #D89B18 0%, #E2A522 100%);
+  color: #ffffff;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 20px rgba(216, 155, 24, 0.25);
+}
+
+.btn-gold-primary:hover {
+  background: linear-gradient(135deg, #F2B632 0%, #D89B18 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(216, 155, 24, 0.45);
+}
+

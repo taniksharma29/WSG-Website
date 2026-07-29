@@ -1,0 +1,6 @@
+{
+  "name": "World Sports Group",
+  "description": "Premium global sports conglomerate building world-class sports properties, leagues, events, and athlete pathways.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
