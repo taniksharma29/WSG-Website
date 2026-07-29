@@ -17,6 +17,7 @@ import {
   Phone,
   Shield
 } from 'lucide-react';
+import wsgDubaiArena from '../assets/images/wsg_dubai_arena_1785224318037.jpg';
 
 interface ManagementPageProps {
   onOpenPartnerModal: () => void;

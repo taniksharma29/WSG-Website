@@ -7,19 +7,20 @@ interface ErrorBoundaryProps {
 
 interface ErrorBoundaryState {
   hasError: boolean;
+  error?: Error | null;
+  errorInfo?: React.ErrorInfo | null;
 }
 
 export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  // @ts-ignore
-  override state: ErrorBoundaryState = { hasError: false };
+  override state: ErrorBoundaryState = { hasError: false, error: null, errorInfo: null };
 
-  static getDerivedStateFromError(): ErrorBoundaryState {
-    return { hasError: true };
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error, errorInfo: null };
   }
 
-  // @ts-ignore
   override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Uncaught error in WSG Application:', error, errorInfo);
+    this.setState({ error, errorInfo });
   }
 
   handleReload = () => {
@@ -33,11 +34,10 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
   };
 
   render() {
-    // @ts-ignore
     if (this.state.hasError) {
       return (
-        <div className="min-h-screen bg-[#0B0B0D] text-white flex items-center justify-center p-6 text-center font-sans">
-          <div className="max-w-lg w-full bg-[#141414] border border-[#D89B18]/40 rounded-3xl p-8 sm:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.8)] space-y-6">
+        <div className="min-h-screen bg-[#0B0B0D] text-white flex items-start justify-center p-6 text-left font-sans">
+          <div className="max-w-4xl w-full bg-[#141414] border border-[#D89B18]/40 rounded-3xl p-8 sm:p-12 shadow-[0_25px_60px_rgba(0,0,0,0.8)] space-y-6">
             <div className="w-16 h-16 rounded-full bg-[#D89B18]/20 border border-[#D89B18] text-[#F2B632] flex items-center justify-center mx-auto">
               <ShieldAlert className="w-8 h-8" />
             </div>
@@ -49,9 +49,26 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoun
               <h1 className="font-serif text-3xl font-bold text-white">
                 Unexpected Display Issue
               </h1>
-              <p className="text-xs text-gray-400 font-light leading-relaxed">
-                An exception occurred while rendering this view. Our engineering team has been notified.
+              <p className="text-sm text-gray-300 font-light leading-relaxed">
+                An exception occurred while rendering this view. The full error is shown below for debugging.
               </p>
+            </div>
+
+            <div className="bg-[#0F0F14] border border-[#2F2F3A] rounded-3xl p-6 text-left text-sm text-[#E2E2E8] overflow-auto max-h-[60vh]">
+              <div className="space-y-4">
+                <div>
+                  <span className="font-semibold text-[#F2B632]">Error:</span>
+                  <div className="mt-2 text-[#F8F8F8] break-words">{this.state.error?.message || 'Unknown error'}</div>
+                </div>
+                <div>
+                  <span className="font-semibold text-[#F2B632]">Component Stack:</span>
+                  <div className="mt-2 text-[#F8F8F8] whitespace-pre-wrap break-words">{this.state.errorInfo?.componentStack || 'No component stack available.'}</div>
+                </div>
+                <div>
+                  <span className="font-semibold text-[#F2B632]">Stack Trace:</span>
+                  <div className="mt-2 text-[#F8F8F8] whitespace-pre-wrap break-words">{this.state.error?.stack || 'No stack trace available.'}</div>
+                </div>
+              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
